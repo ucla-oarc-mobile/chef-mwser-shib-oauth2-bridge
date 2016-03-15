@@ -1,4 +1,4 @@
-# ectg-shib-oauth2-bridge-cookbook
+# mwser-shib-oauth2-bridge-cookbook
 
 TODO: Enter the cookbook description here.
 
@@ -16,7 +16,7 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['ectg-shib-oauth2-bridge']['bacon']</tt></td>
+    <td><tt>['mwser-shib-oauth2-bridge']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -25,14 +25,14 @@ TODO: List your supported platforms.
 
 ## Usage
 
-### ectg-shib-oauth2-bridge::default
+### mwser-shib-oauth2-bridge::default
 
-Include `ectg-shib-oauth2-bridge` in your node's `run_list`:
+Include `mwser-shib-oauth2-bridge` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[ectg-shib-oauth2-bridge::default]"
+    "recipe[mwser-shib-oauth2-bridge::default]"
   ]
 }
 ```

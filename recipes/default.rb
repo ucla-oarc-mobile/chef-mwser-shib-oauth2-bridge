@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: ectg-shib-oauth2-bridge
+# Cookbook Name:: mwser-shib-oauth2-bridge
 # Recipe:: default
 #
 # Copyright (C) 2016 UC Regents
