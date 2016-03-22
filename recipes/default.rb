@@ -103,7 +103,17 @@ when 'ucnext.org'
     ]
   end
 when 'onlinepoll.ucla.edu'
-  # TODO: configure this
-else
-  # no-op?
+  shib_oauth2_bridge 'default' do
+    db_user 'bridge'
+    db_name 'bridge'
+    hostname 'onlinepoll.ucla.edu'
+    db_password db_bridge
+    clients [
+      { id: 'opt', name: 'opt', secret: bridge_secrets['opt'], redirect_uri: 'https://onlinepoll.ucla.edu/auth/oauth2/shibboleth/launch' },
+      { id: 'staging_opt', name: 'staging_opt', secret: bridge_secrets['staging_opt'], redirect_uri: 'https://staging.onlinepoll.ucla.edu/auth/oauth2/shibboleth/launch' },
+      { id: 'casa', name: 'casa', secret: bridge_secrets['casa'], redirect_uri: 'https://casa.m.ucla.edu/session/oauth2/shibboleth' },
+      { id: 'staging_casa', name: 'staging_casa', secret: bridge_secrets['staging_casa'], redirect_uri: 'https://casa-staging.m.ucla.edu/session/oauth2/shibboleth' }
+
+    ]
+  end
 end
